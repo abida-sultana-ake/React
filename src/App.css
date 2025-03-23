@@ -48,3 +48,27 @@
   border: 3px solid salmon;
   text-align: left;
 }
+
+.default {
+  margin: 10px;
+  padding: 10px;
+  border-radius: 20px;
+  border: 3px solid rgba(114, 250, 227, 0.623);
+  text-align: left;
+}
+
+.iftari {
+  margin: 10px;
+  padding: 10px;
+  border-radius: 20px;
+  border: 3px solid rgba(141, 250, 114, 0.733);
+  text-align: left;
+}
+
+.namaz {
+  margin: 10px;
+  padding: 10px;
+  border-radius: 20px;
+  border: 3px solid rgba(250, 114, 220, 0.733);
+  text-align: left;
+}

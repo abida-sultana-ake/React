@@ -2,6 +2,7 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
+import ToDo from './todo';
 
 function App() {
   const [count, setCount] = useState(0)
@@ -17,7 +18,10 @@ function App() {
         </a>
       </div>
       <h1>Vite + React</h1>
-      <Person></Person>
+      <ToDo task="Learn React"></ToDo>
+      <ToDo task="Revise React" isDone={true} ></ToDo>
+      <ToDo task="Take time to learn React" isDone={false}></ToDo>
+      {/* <Person></Person>
       <Sport></Sport>
       <Pet></Pet>
       <Student name="Aka" dept="CSE"></Student>
@@ -31,6 +35,12 @@ function App() {
       <Salami name="Bushra" salami="1000"></Salami>
       <Salami name="Mahiya" salami="100"></Salami>
       <Salami name="Borsha" salami="1000"></Salami>
+      <Book name="Ri" price="200"></Book>
+      <Book name="Sparkel" price="250"></Book>
+      <Iftari food="Chola" quantity="10/10"></Iftari>
+      <Iftari food="Peyaju"></Iftari>
+      <Namaz time="Fazar" done="Yes"></Namaz>
+      <Namaz time="Magrib" done="Yes"></Namaz>  */}
       <div className="card">
         <button onClick={() => setCount((count) => count + 1)}>
           count is {count}
@@ -54,12 +64,44 @@ function Player ({name, runs}) {
     </div>
   )
 }
-// another example of Destructing
+// another example of Destructing -1 
 function Salami ({name, salami}) {
   return(
     <div className='student'>
       <h3>Name: {name} </h3>
       <p>Salami Amount: {salami} </p>
+    </div>
+  )
+}
+
+// another example of Destructing - 2
+function Book({name, price})
+{
+  return(
+    <div className='default'>
+      <h3>Name of the book: {name} </h3>
+      <p>Price: {price} </p>
+    </div>
+  )
+}
+
+// another example of Destructing - 3
+function Iftari({ food, quantity = 0 }) {
+  return (
+    <div className="iftari">
+      <h3>Food: {food}</h3>
+      <p>Quantity: {quantity}</p>
+    </div>
+  );
+}
+
+// another example of Destructing - 4
+function Namaz({time, done})
+{
+  return(
+    <div className='namaz'>
+      <h3>Time: {time} </h3>
+      <p>Done: {done} </p>
     </div>
   )
 }
